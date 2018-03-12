@@ -1,0 +1,29 @@
+//centrowanie 1 sposób działa wszędzie
+
+@mixin centrowanie {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 70vh;
+    margin: auto;
+}
+
+//centrowanie 2 sposób działa nie wszędzie
+
+@mixin centrowanie2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50vh;
+}
+
+@mixin przytnij($procent) {
+    width: $procent;
+    height: $procent; 
+    object-fit: cover;
+}
